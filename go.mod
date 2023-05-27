@@ -2,7 +2,7 @@ module iceShell
 
 go 1.19
 
-replace ice => ../IceLang
+replace ice => ../ICE-lang
 
 require (
 	github.com/gdamore/encoding v1.0.0 // indirect
