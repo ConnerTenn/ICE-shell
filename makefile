@@ -1,20 +1,21 @@
 
-all: clean build run
+all: shell
 
 list:
 	@echo Targets:
 	@echo "  build"
-	# @echo "  test"
+	@echo "  test"
+	@echo "  shell"
 	@echo "  clean"
-	@echo default: clean build shell
+	@echo default: shell
 
-run: build
+shell: build
 	./iceShell
 
-build: clean
+build: test
 	go build
 
-test: build
+test:
 	go test ./ -v -failfast -timeout 5s
 
 clean:
