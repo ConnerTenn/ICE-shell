@@ -115,7 +115,7 @@ func RunShell(globalMemFile string) (err error) {
 
 			// Parse the code into a ice.List object
 			var codeRet ice.Obj
-			code, iceErr := ctx.ParseList(script.MakeSequ())
+			code, iceErr := ice.ParseList(script.MakeSequ())
 			if ice.IsErr(iceErr) {
 				codeRet = ice.NewError("Shell InputCapture", "Failed to Parse into a list", iceErr)
 			} else {
